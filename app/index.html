@@ -5,38 +5,45 @@
   <title>EACP Framework</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="app.css">
-  <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="wireframe.css" type="text/css">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="phaseA/phaseA.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="phaseB/phaseB.js"></script>
   <script src="core/version/version.js"></script>
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script
+
 </head>
 <body>
 
+  
   <ul class="breadcrumb">
       <li class="breadcrumb-item"><a href="#!/phaseA">PhaseA</a></li>
-      <li class="breadcrumb-item"><a href="#!/view2">view2</a></li>
+      <li class="breadcrumb-item"><a href="#!/phaseB">PhaseB</a></li>
   </ul>
   <div class="py-5 text-center">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="display-3 text-capitalize">EACP Framework</h1>
+          <h2 class="display-3 text-capitalize">EACP Framework</h2>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+  jQuery('#phaseAImg').scroll(function() { 
+      $('#phaseAImg').animate({top:$(this).scrollTop()});
+  });
+</script>
 
   <div ng-view></div>
 

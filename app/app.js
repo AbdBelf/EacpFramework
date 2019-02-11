@@ -4,7 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.phaseA',
-  'myApp.view2',
+  'myApp.phaseB',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

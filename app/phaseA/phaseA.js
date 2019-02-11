@@ -11,8 +11,9 @@ angular.module('myApp.phaseA', ['ngRoute'])
 
 .controller('PhaseACtrl', ['$scope',function($scope) {
   
-  
-  
+  $scope.imgName = "implementationPhaseA1.png";
+  $scope.progressValue = "10%";
+
   $scope.goals =  {"goals":[
     {"id":"1","description":" Enable a collaboration channel with an SME in a complementary business domain ","source":"CEO"},
     {"id":"1","description":" Enable a collaboration channel with an SME in a complementary business domain ","source":"CEO"}
@@ -76,6 +77,9 @@ angular.module('myApp.phaseA', ['ngRoute'])
 
   $scope.fetchTemplateAEAKR = function(){
 
+    $scope.progressValue = "20%";
+    document.getElementById('progressBarid').style.width = $scope.progressValue;
+    $scope.imgName = "implementationPhaseA2.png";
     $scope.volereTemplatesEAKR = {"volereTemplate":[{"id":0,"projectDriver":"Project Driver EAKR 1","userBusiness":"user business content","projectGoal":"business goal content","objectives":[{"id":1,"description":"objective description","source":"stakeholder source"},{"id":2,"description":"objective description 2","source":"stakeholder source 2"}],"client":"client","customer":"costumer","":{},"stakeholders":[{"id":1,"name":"Bob","groupe":"CEO","class":"Keep_Satisfied","power":1},{"id":2,"name":"Alice","groupe":"production_operator","class":"Key_player","power":2},{"id":3,"name":"Bob 2","groupe":"CEO","class":"Keep_Satisfied","power":1},{"id":4,"name":"Alice 2","groupe":"production_operator","class":"Key_player","power":2}],"users":[{"id":0,"name":"Alice","category":"production_operator","role":"production_operator","priority":2}]},{"id":1,"projectDriver":"Project Driver EAKR 2","userBusiness":"user business content 2","projectGoal":"business goal content 2","objectives":[{"id":1,"description":"objective description second time","source":"stakeholder source"},{"id":2,"description":"objective description also","source":"stakeholder source 2"}],"client":"APR","customer":"APR","":{},"stakeholders":[{"id":1,"name":"Bob Template Example","groupe":"CEO","class":"Keep_Satisfied","power":1},{"id":2,"name":"Alice","groupe":"production_operator","class":"Key_player","power":2},{"id":3,"name":"Bob Template 2","groupe":"CEO","class":"Keep_Satisfied","power":1},{"id":4,"name":"Alice Template 22","groupe":"production_operator","class":"Key_player","power":2}],"users":[{"id":0,"name":"Alice Template 2","category":"production_operator","role":"production_operator","priority":2}]}]};
    
   }

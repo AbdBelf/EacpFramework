@@ -1,0 +1,213 @@
+<div ng-controller="PhaseBCtrl">
+    <div class="py-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="lead text-muted">Phase B -&nbsp; Business Architecture</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>TOGAF Artifacts</h2>
+                <div class="py-5 border">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="col-md-12">
+                                    <form class="">
+                                        <div class="form-group">
+                                            <label>ArchiMate Motivation Extension
+                                                <br>
+                                            </label>
+                                            <input type="file" class="form-control-file bg-light" placeholder="Enter email" name="businessObjGoalsFile"/> 
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        <div class="col-md-6"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border">
+                    <div class="container">
+                        <div class="form-group" style="margin-top: 20px;padding: 20px 20px 20px 20px;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Stakeholder Map
+                                        <br>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="Name" placeholder="" ng-model="stakeholderName" required="">
+                                    <div class="invalid-feedback"> Valid Name is required. </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Groupe">Groupe</label>
+                                    <input type="text" class="form-control" id="Groupe" placeholder="" ng-model="stakeholderGroupe" required="">
+                                    <div class="invalid-feedback"> Valid Groupe is required. </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="Class">Class</label>
+                                    <input type="text" class="form-control" id="Class" placeholder="" ng-model="stakeholderClass" required="">
+                                    <div class="invalid-feedback"> Valid Class is required. </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Power">Power</label>
+                                    <input type="text" class="form-control" id="Power" placeholder="" ng-model="stakeholderPower" required="">
+                                    <div class="invalid-feedback"> Valid Power is required. </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button ng-click="addStakeholder()" class="btn btn-sm btn-light mt-3">+ Stakeholder</button>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 50px;">
+                                <div class="col-md-12">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active my-0 mt-1"> Stakeholders
+                                                <label></label>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action" ng-repeat="stakeholder in stakeholders.stakeholders">{{stakeholder.name}}</a> 
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: -20px;">
+                    <div class="col-md-4">
+                        <button class="btn btn-sm btn-light mt-4 mb-1 btn-block" style="margin-top : 50px;" ng-click="fetchTemplateAEAKR()" >Check Templates</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-5 border">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Volere&nbsp;Templates
+                            <br>
+                        </h2>
+                        <div class="form-group">
+                            <label>User Business</label>
+                            <input type="text" class="form-control" id="Name" placeholder="" value="{{templateA.userBusiness}}" required="">
+                            <div class="form-group">
+                                <div class="blockquote">
+                                    <p class="mb-0">Business Goal</p>
+                                    <div class="blockquote-footer">{{templateA.projectGoal}}</div>
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action active my-0 mt-1"> Business Objectives
+                                        <label></label>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action" ng-repeat="objective in templateA.objectives">{{objective.description}}</a> 
+                                </div>
+                                <div class="form-group">
+                                    <label>Client</label>
+                                    <input type="text" class="form-control" id="Name" placeholder="" value="{{templateA.client}}" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label contenteditable="true">Customer</label>
+                                    <input type="text" class="form-control" id="Name" placeholder="" value="{{templateA.customer}}"
+                                        required="">
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action active my-0 mt-1" style=""> Stakeholders
+                                        <label></label>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action" ng-repeat="stakeholder in templateA.stakeholders">{{stakeholder.name}}</a> 
+                                </div>
+                                <div class="row">
+                                    <div class="container">
+                                        <div class="form-group border" style="margin-top: 20px;padding: 20px 20px 20px 20px;">
+                                            <div class="row">
+                                                <div class="col-md-6" style="">
+                                                    <label>User Map
+                                                        <br>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="name">Name</label>
+                                                    <input type="text" class="form-control" id="UserName" ng-model="templateUserName" placeholder="" value="" required="">
+                                                    <div class="invalid-feedback"> Valid Name is required. </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="Category">Category</label>
+                                                    <input type="text" class="form-control" id="Category" ng-model="templateUserCategory" placeholder="" value="" required="">
+                                                    <div class="invalid-feedback"> Valid Category is required. </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="Role">Role</label>
+                                                    <input type="text" class="form-control" id="Role" ng-model="templateUserRole" placeholder="" value="" required="">
+                                                    <div class="invalid-feedback"> Valid Role is required. </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="Prioriry">Prioriry</label>
+                                                    <input type="text" class="form-control" id="Priority" ng-model="templateUserPriority" placeholder="" value="" required="">
+                                                    <div class="invalid-feedback"> Valid Prioriry is required. </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <a class="btn btn-sm btn-light mt-3" ng-click="addUserTemplate()">+ User</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action active my-0 mt-1"> Users
+                                        <label></label>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action" ng-repeat="user in templateA.users">{{user.name}}</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Volere&nbsp;Templates EAKR
+                            <br>
+                        </h2>
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action" ng-repeat="volereTemplate in volereTemplatesEAKR.volereTemplate" ng-model="volereTemplate" ng-click="selectVolereTemplateEAKR(volereTemplate)" >{{volereTemplate.projectDriver}}</li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="btn mt-12 btn-sm btn-block btn-outline-dark m-2">Validation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
