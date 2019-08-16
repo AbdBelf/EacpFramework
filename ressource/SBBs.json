@@ -1,0 +1,254 @@
+{  
+    "SBBs":[  
+        {  
+            "id":1,
+            "name":"3DScan_Get3DObject_SBB",
+            "uri":"FitmanGL/rest/get_id_canvas/{imageObjectId}",
+            "input_parameters":[
+                {
+                    "name": "imageObjectId",
+                    "type": "int"
+                }
+                  
+            ],
+            "output_parameters":[
+                {
+                    "name": "object",
+                    "type": "file"
+                }
+                  
+            ],
+            "platforms": [
+                {
+                "platform_name": "Tomcat",
+                "owner": {
+                  "name": "Apache Software Foundation",
+                  "street": "",
+                  "city": "",
+                  "zip": "",
+                  "state": "",
+                  "country": "",
+                  "comment": "License Under the Apache License, Version 2.0"
+                },
+                "certification":"No",
+                "support": "Yes",
+                "security_properties":"N/A",
+                "network_properties": "N/A", 
+                "storage_properties": "N/A",
+                "memory_properties":"N/A",
+                "cpu_properties":"N/A"
+                }
+                ]
+            ,
+            "environment": [
+                {
+                    "name" : "jersey-json",
+                    "version": "1.9.1"
+                },
+                {
+                    "name" : "jackson-jaxrs",
+                    "version": "1.8.3"
+                },
+                {
+                    "name" : "mysql-connector-java",
+                    "version": "5.1.30"
+                } 
+            ],
+                 
+            "technicalRequirement": {
+                "name": "TR1_3DScan_get3DObject",
+                "description": "The get3DObject is exposed over a REST endpoint. The return data is a JavaScript code which could be integrated in any web page to display the 3D file. ",
+                "rational": "To have the possibility to display the Object in the visualizer taking as input the 3D Object File based on JavaScript"
+            },
+            "technologyConstraints": [
+                {
+                "name": "TC_3DScan_get3DObject ",
+                "description": "The 3Dscan ME must run in a servlet container such as Tomcat, and should not depend on a particular operating system ",
+                "rational": "To have the possibility to deploy this ME in any java-based technology stack"
+                },
+              {
+                "name": "TC2_3DScan_get3DObject ",
+                "description": " The 3D File with stl extension must be serialized using text/JavaScript serialization and based on three.js library",
+                "rational": "To have the possibility to display the 3D File in any web page using <script> tag"
+                }
+            ],
+            "exceptions": [
+                {
+                "name": "Exception2_3DScan_get3DObject ",
+                "type": "IOException"
+                },
+                {
+                "name": "Exception1_3DScan_get3DObject ",
+                "type": "MalformedURLException"
+                }  
+              
+            ],
+            "Performance": [
+                {
+                "name": "Web Application Capacity Metric",
+                "description": "measurable characteristics of Web application capacity",
+                "unit": "requests per minute",
+                "value": "10,000 "
+                },
+                {
+                "name": " Average Instance Starting Time Metric ",
+                "description": " average time required to initialize a new instance ",
+                "unit": "minutes",
+                "value": "1 "
+                },
+                {
+                "name": " Maximum Instance Starting Time Metric ",
+                "description": " Maximum time required to initialize a new instance ",
+                "unit": "minutes",
+                "value": "2 "
+                },
+                {
+                "name": " Response Time Metric ",
+                "description": " Measure how long it took for a service to process a request ",
+                "unit": "Average time in ms",
+                "value": "14.7 "
+                }
+              ],
+
+              "Availability": [
+                {
+                "name": " Availability Rate Metric ",
+                "description": " percentage of service up-time",
+                "unit": "%",
+                "value": "100"
+               }
+              ],
+              "Reliability": [{
+                "name": " Availability Rate Metric ",
+                "description": " percentage of successful service outcomes ",
+                "unit": "%",
+                "value": "100"
+               }]
+        },
+        {  
+            "id":2,
+            "name":"3DScan_Get3DObject_SBB",
+            "uri":"FitmanGL/rest/get_id_canvas/{imageObjectId}",
+            "input_parameters":[
+                {
+                    "name": "imageObjectId",
+                    "type": "int"
+                }
+                  
+            ],
+            "output_parameters":[
+                {
+                    "name": "object",
+                    "type": "file"
+                }
+                  
+            ],
+            "platforms": [
+                {
+                "platform_name": "Tomcat",
+                "owner": {
+                  "name": "Apache Software Foundation",
+                  "street": "",
+                  "city": "",
+                  "zip": "",
+                  "state": "",
+                  "country": "",
+                  "comment": "License Under the Apache License, Version 2.0"
+                },
+                "certification":"No",
+                "support": "Yes",
+                "security_properties":"N/A",
+                "network_properties": "N/A", 
+                "storage_properties": "N/A",
+                "memory_properties":"N/A",
+                "cpu_properties":"N/A"
+                }
+                ]
+            ,
+            "environment": [
+                {
+                    "name" : "jersey-json",
+                    "version": "1.9.1"
+                },
+                {
+                    "name" : "jackson-jaxrs",
+                    "version": "1.8.3"
+                },
+                {
+                    "name" : "mysql-connector-java",
+                    "version": "5.1.30"
+                } 
+            ],
+                 
+            "technicalRequirement": {
+                "name": "TR1_3DScan_get3DObject",
+                "description": "The get3DObject is exposed over a REST endpoint. The return data is a JavaScript code which could be integrated in any web page to display the 3D file. ",
+                "rational": "To have the possibility to display the Object in the visualizer taking as input the 3D Object File based on JavaScript"
+            },
+            "technologyConstraints": [
+                {
+                "name": "TC_3DScan_get3DObject ",
+                "description": "The 3Dscan ME must run in a servlet container such as Tomcat, and should not depend on a particular operating system ",
+                "rational": "To have the possibility to deploy this ME in any java-based technology stack"
+                },
+              {
+                "name": "TC2_3DScan_get3DObject ",
+                "description": " The 3D File with stl extension must be serialized using text/JavaScript serialization and based on three.js library",
+                "rational": "To have the possibility to display the 3D File in any web page using <script> tag"
+                }
+            ],
+            "exceptions": [
+                {
+                "name": "Exception2_3DScan_get3DObject ",
+                "type": "IOException"
+                },
+                {
+                "name": "Exception1_3DScan_get3DObject ",
+                "type": "MalformedURLException"
+                }  
+              
+            ],
+            "Performance": [
+                {
+                "name": "Web Application Capacity Metric",
+                "description": "measurable characteristics of Web application capacity",
+                "unit": "requests per minute",
+                "value": "10,000 "
+                },
+                {
+                "name": " Average Instance Starting Time Metric ",
+                "description": " average time required to initialize a new instance ",
+                "unit": "minutes",
+                "value": "1 "
+                },
+                {
+                "name": " Maximum Instance Starting Time Metric ",
+                "description": " Maximum time required to initialize a new instance ",
+                "unit": "minutes",
+                "value": "2 "
+                },
+                {
+                "name": " Response Time Metric ",
+                "description": " Measure how long it took for a service to process a request ",
+                "unit": "Average time in ms",
+                "value": "14.7 "
+                }
+              ],
+
+              "Availability": [
+                {
+                "name": " Availability Rate Metric ",
+                "description": " percentage of service up-time",
+                "unit": "%",
+                "value": "100"
+               }
+              ],
+              "Reliability": [{
+                "name": " Availability Rate Metric ",
+                "description": " percentage of successful service outcomes ",
+                "unit": "%",
+                "value": "100"
+               }]
+        }
+    ]
+}

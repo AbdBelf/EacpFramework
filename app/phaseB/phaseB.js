@@ -29,14 +29,39 @@ angular.module('myApp.phaseB', ['ngRoute'])
     this.constraintMap = [];
   }
 
-  $scope.userMapB = [
-    {"id": 0, "name": "Alice", "priority": 2, "role": "production_operator", "category": "production_operator"},
-    {"id": 1, "name": "Abdelhadi", "priority": 2, "role": "production_operator", "category": "production_operator"},
-    {"id": 2, "name": "Bob", "priority": 2, "role": "production_operator", "category": "production_operator"},
-  ];
+  $scope.userMapB = "";
 
   $scope.userOptionMap = "";
   $scope.actorsMapB = [];
+
+
+  $scope.businessEntityFileUpload = function(){
+
+    
+    $scope.useCaseMaps = [
+      {"id":"1", "actorId":"1","description":" Industrialize products from common customer projects "},
+      {"id":"2", "actorId":"1","description":" Industrialize products from common customer projects "}
+    ];
+
+    $scope.userMapB = [
+      {"id": 0, "name": "Alice", "priority": 2, "role": "production_operator", "category": "production_operator"},
+      {"id": 1, "name": "Abdelhadi", "priority": 2, "role": "production_operator", "category": "production_operator"},
+      {"id": 2, "name": "Bob", "priority": 2, "role": "production_operator", "category": "production_operator"},
+    ];
+  
+
+  }
+
+  
+  $scope.selectUseCaseEntity = function(){
+
+    $scope.entityMaps =  [
+      {"id":"1", "name" : "CAD_Object", "description":" Enable a collaboration channel with an SME in a complementary business domain "},
+      {"id":"2", "name" : "Product", "description":" Enable a collaboration channel with an SME in a complementary business domain "}
+    ];
+  
+    }
+
 
   $scope.addActorCatalog = function(){
 

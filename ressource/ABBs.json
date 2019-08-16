@@ -1,0 +1,120 @@
+{  
+    "ABBs":[  
+        {  
+            "id":1,
+            "name":"3DScan_Get3DObject_ABB",
+            "stakeholders":[  
+                {  
+                    "id":1,
+                    "name":"Quality Engineer",
+                    "groupe":"Quality",
+                    "class":"Keep_Satisfied",
+                    "power":1
+                }
+            ],
+            "businessVisionStatement":"3D scanning technology can be useful in prototyping and design, reverse engineering, in-line manufacturing inspection and/or quality control.",
+            "businessProblemDescription":"Perform dimensional controls to determine if the analyzed manufactured part must be accepted or rejected without slowing the production rhythm",
+            "implementationSpecification":{
+                  "name": "IS1_3DScan_get3DObject",
+                  "description": "The get3DObject service return 3D Object that is compliant with Three.js library",
+                  "rational": "To have the possibility to display the Object in a Web page"
+            },
+            "implementationStandard":{
+                "name": "IST1_3DScan_get3DObject",
+                "description": "The 3D Object returned by get3DObject service must be compliant with the ISO 10303 STEP-file Standard",
+                "rational": "To have the possibility to share 3D models between users with different CAD systems"
+            },
+            "applicationInteroperabilityRequirement":{
+                "name": "IR1_3DScan_get3DObject",
+                "description": "get3DObject service accept XML as serialization data format",
+                "rational": "To have the possibility to interoperate with different visualization systems"
+            },
+            "businessEvent":"The visualizer developed in FitmanGL_DisplayTesting.html Sends an http get request with the appropriate URI of this ABB to trigger the service.",
+            "dataInteroperabilityRequirement": {
+                "name": "DIR1_3DScan_get3DObject",
+                "description": "get3DObject service accept XML as serialization data format",
+                "rational": "To have the possibility to interoperate with the visualization component developed in FitmanGL_DisplayTesting.html Web page"
+            },
+            "Parameters":{  
+                    "functionName":"Display one existing 3D file stored in database",
+                    "inputParameters": {
+                        "imageObjectId": "int"
+                    },
+                    "outputParameters":{
+                        "object": "File"
+                    }
+            },
+            "infrastructureConstraint": {
+            "name": "IC1_3DScan_get3DObject ",
+            "description": "The 3Dscan ME must run in a servlet container such as Tomcat, and should not depend on a particular operating system",
+            "rational": "To have the possibility to deploy this ME in any java-based technology stack"
+            },
+            "Capability":{
+                "businessUseCase": "Compare geometries of 3D CAD design",
+                "businessFunction": "Retrieve the point cloud of the analyzed part",
+                "businessActor": {
+                    "name": "Manufacturing Quality Engineers",
+                    "role": "quality_engineer"
+                }   
+            }
+        },
+        {  
+            "id":2,
+            "name":"3DScan_update3DObject_ABB",
+            "stakeholders":[  
+                {  
+                    "id":1,
+                    "name":"Quality Engineer",
+                    "groupe":"Quality",
+                    "class":"Keep_Satisfied",
+                    "power":1
+                }
+            ],
+            "businessVisionStatement":"3D scanning technology can be useful in prototyping and design, reverse engineering, in-line manufacturing inspection and/or quality control.",
+            "businessProblemDescription":"Perform dimensional controls to determine if the analyzed manufactured part must be accepted or rejected without slowing the production rhythm",
+            "implementationSpecification":{
+                  "name": "IS1_3DScan_update3DObject",
+                  "description": "The get3DObject service return 3D Object that is compliant with Three.js library",
+                  "rational": "To have the possibility to display the Object in a Web page"
+            },
+            "implementationStandard":{
+                "name": "IST1_3DScan_update3DObject",
+                "description": "The 3D Object returned by get3DObject service must be compliant with the ISO 10303 STEP-file Standard",
+                "rational": "To have the possibility to share 3D models between users with different CAD systems"
+            },
+            "applicationInteroperabilityRequirement":{
+                "name": "IR1_3DScan_update3DObject",
+                "description": "get3DObject service accept XML as serialization data format",
+                "rational": "To have the possibility to interoperate with different visualization systems"
+            },
+            "businessEvent":"The visualizer developed in FitmanGL_DisplayTesting.html Sends an http get request with the appropriate URI of this ABB to trigger the service.",
+            "dataInteroperabilityRequirement": {
+                "name": "DIR1_3DScan_update3DObject",
+                "description": "get3DObject service accept XML as serialization data format",
+                "rational": "To have the possibility to interoperate with the visualization component developed in FitmanGL_DisplayTesting.html Web page"
+            },
+            "Parameters":{  
+                    "functionName":"Display one existing 3D file stored in database",
+                    "inputParameters": {
+                        "imageObjectId": "int"
+                    },
+                    "outputParameters":{
+                        "object": "File"
+                    }
+            },
+            "infrastructureConstraint": {
+            "name": "IC1_3DScan_update3DObject ",
+            "description": "The 3Dscan ME must run in a servlet container such as Tomcat, and should not depend on a particular operating system",
+            "rational": "To have the possibility to deploy this ME in any java-based technology stack"
+            },
+            "Capability":{
+                "businessUseCase": "Compare geometries of 3D CAD design",
+                "businessFunction": "Retrieve the point cloud of the analyzed part",
+                "businessActor": {
+                    "name": "Manufacturing Quality Engineers",
+                    "role": "quality_engineer"
+                }   
+            }
+        }
+    ]
+}

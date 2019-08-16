@@ -23,12 +23,28 @@
                                         <label>ArchiMate Motivation Extension
                                             <br>
                                         </label>
-                                        <input type="file" class="form-control-file bg-light" placeholder="Enter email" name="businessObjGoalsFile"/> 
+                                        <input type="file" class="form-control-file bg-light" placeholder="Enter email" name="businessObjGoalsFile"  style="float:left"/> 
+                                        <a ng-click="motivationExtensionUpload()" class="btn mt-12 btn-sm btn-block btn-light m-2" style="float:right">Parse File</a>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                    <div class="col-md-6"></div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <div class="list-group">
+                                    <a href="" class="list-group-item list-group-item-action active"> Business Objectives</a>
+                                    <a href="" class="list-group-item list-group-item-action" ng-model="objectives" ng-repeat="bobjective in objectives.objectives" ng-click="selectBusinessObjective(bobjective)">{{bobjective.description}}</a> 
+                                </div>   
+                        </div>
+                        <div class="col-md-6">
+                                <div class="list-group">
+                                    <a href="" class="list-group-item list-group-item-action active"> Business Goals</a>
+                                    <a href="" class="list-group-item list-group-item-action" ng-repeat="bgoal in goals.goals">{{bgoal.description}}</a> 
+                                </div>        
+                        </div>
                     </div>
                 </div>
             </div>

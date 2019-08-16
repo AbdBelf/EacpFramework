@@ -1,0 +1,307 @@
+<div ng-controller="PhaseC1Ctrl">
+<div id="phaseCDiv" style="width: 60%; float : left;">
+    <div class="py-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="lead text-muted">Phase C -&nbsp; Data Architecture</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                <h4>Architecture Artifacts</h4>
+                <div class="py-5 border">
+                    <div class="container">
+                        <div class="row">
+                           
+                            <div class="col-md-6">
+                                <div class="col-md-12">
+                                    <form class="">
+                                        <div class="form-group">
+                                            <label>ArchiMate Business Entity Relationship 
+                                                <br>
+                                            </label>
+                                            <input type="file" class="form-control-file bg-light" placeholder="ArchiMate Business Entity Relationship" name="bEntityFile"  style="float:left"/> 
+                                        <a ng-click="businessEntityFileUpload()" class="btn mt-12 btn-sm btn-block btn-light m-2" style="float:right">Parse File</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <div class="list-group">
+                                        <a href="" class="list-group-item list-group-item-action active"> Business Use Case</a>
+                                        <a href="" class="list-group-item list-group-item-action" ng-model="useCaseMaps" ng-repeat="useCase in useCaseMaps" ng-click="selectUseCaseEntity()">{{useCase.description}}</a> 
+                                    </div>   
+                            </div>
+                            <div class="col-md-6">
+                                    <div class="list-group">
+                                        <a href="" class="list-group-item list-group-item-action active"> Related Entities</a>
+                                        <a href="" class="list-group-item list-group-item-action" ng-repeat="entity in entityMaps">{{entity.name}}</a> 
+                                    </div>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+                
+        </div>
+        <div class="row">
+                <div class="col-md-12">
+                <div class="py-5 border">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <label>UML Class Diagram 
+                                        <br>
+                                    </label>
+                                    <form class="">
+                                        <div class="form-group">
+                                            
+                                            <input ng-model="umlFiles" ng-change="umlClassDiagramUpload()" type="file" class="form-control-file bg-light" placeholder="UML Class Diagram" name="umlClassDiagram" style=" width: 50%; float:left"/> 
+
+                                            <a ng-click="umlClassDiagramUpload()" class="btn mt-12 btn-sm btn-block btn-light m-2" style=" width: 30%; float:left">Submit</a>
+                                        </div>
+                                    </form>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <div class="list-group">
+                                        <a href="" class="list-group-item list-group-item-action active"> Data Requirements</a>
+                                        <a href="" class="list-group-item list-group-item-action" ng-model="umlClassMap" ng-repeat="umlClass in umlClassMap" ng-click="selectUMLClass(umlClass)">{{umlClass.name}}</a> 
+                                    </div>   
+                            </div>
+                            <div class="col-md-6">
+                                    <div class="list-group">
+                                        <a href="" class="list-group-item list-group-item-action active"> Related Atrributes</a>
+                                        <a href="" class="list-group-item list-group-item-action" ng-repeat="attribute in attributeMaps">{{attribute.name}}</a> 
+                                    </div>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+                
+        </div>
+       
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-5 border">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="form-group" style="padding: 0px 20px 20px 20px;  float: left;width: 49%;">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Data Interoperability Requirement
+                                                    <br>
+                                                </label>
+                                            </div>
+                                        </div>        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="descriptionDataInteropReqC1">Description</label>
+                                                <input type="text" class="form-control" id="descriptionDataInteropReqC1" placeholder="" ng-model="descriptionDataInteropReqC1" required="">
+                                                <div class="invalid-feedback"> Valid Description is required. </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="rationaleDataInteropReqC1">Rationale</label>
+                                                <input type="text" class="form-control" id="rationaleDataInteropReqC1" placeholder="" ng-model="rationaleDataInteropReqC1" required="">
+                                                <div class="invalid-feedback"> Valid Rationale is required. </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="criterionDataInteropReqC1">Fit Criterion</label>
+                                                <input type="text" class="form-control" id="criterionDataInteropReqC1" placeholder="" ng-model="criterionDataInteropReqC1" required="">
+                                                <div class="invalid-feedback"> Valid Fit Criterion is required. </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="originatorDataInteropReqC1">Originator</label>
+                                                <input type="text" class="form-control" id="originatorDataInteropReqC1" placeholder="" ng-model="originatorDataInteropReqC1" required="">
+                                                <div class="invalid-feedback"> Valid Originator is required. </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <button ng-click="addDataInteropReqC1()" class="btn btn-sm btn-light mt-3">+ Requirement</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button ng-click="clearDataInteropReqC1()" class="btn btn-sm btn-light mt-3">Clear requirement</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group" style="float: left;width: 49%;">
+                                        <a href="" class="list-group-item list-group-item-action active"> Data Interoperability Requirement list
+                                            <label></label>
+                                        </a>
+                                        <a href="" class="list-group-item list-group-item-action" ng-repeat="requirment in dataInteropReqMapC1">{{requirment.originator}} - {{requirment.description}}</a> 
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="form-group" style="padding: 0px 20px 20px 20px;  float: left;width: 49%;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Define Constraint
+                                            <br>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="constraintTypeC1">Type</label>
+                                        <select class="custom-select custom-select" id="constraintTypeC1" ng-model="constraintTypeC1" >
+                                            <option selected value="1">Technology Constraint</option>                                            
+                                        </select>
+                                        <div class="invalid-feedback"> Valid Constraint is required. </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="constraintDescriptionC1">Description</label>
+                                        <input type="text" class="form-control" id="constraintDescriptionC1" placeholder="" ng-model="constraintDescriptionC1" required="">
+                                        <div class="invalid-feedback"> Valid Description is required. </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="constraintRationaleC1">Rationale</label>
+                                        <input type="text" class="form-control" id="constraintRationaleC1" placeholder="" ng-model="constraintRationaleC1" required="">
+                                        <div class="invalid-feedback"> Valid Rationale is required. </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="constraintFitCriterionC1">Fit Criterion</label>
+                                        <input type="text" class="form-control" id="constraintFitCriterionC1" placeholder="" ng-model="constraintFitCriterionC1" required="">
+                                        <div class="invalid-feedback"> Valid Fit Criterion is required. </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="constraintOriginatorC1">Originator</label>
+                                        <input type="text" class="form-control" id="constraintOriginatorC1" placeholder="" ng-model="constraintOriginatorC1" required="">
+                                        <div class="invalid-feedback"> Valid Originator is required. </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button ng-click="addConstraintC1()" class="btn btn-sm btn-light mt-3">+ Constraint</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button ng-click="clearConstraintC1()" class="btn btn-sm btn-light mt-3">Clear constraint</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group" style="float: left;width: 49%;">
+                                <a href="" class="list-group-item list-group-item-action active"> Constraints list
+                                    <label></label>
+                                </a>
+                                <a href="" class="list-group-item list-group-item-action" ng-repeat="constraint in constraintsMapC1">Type: {{constraint.type}} - Originator: {{constraint.originator}}</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row" >
+                    <div class="col-md-4">
+                        <button class="btn btn-sm  mt-4 mb-1 btn-block" style="margin-top : 50px;" ng-click="fetchABB()" >Fetch ABBs</button>
+                    </div>
+                </div>
+            <div class="py-5 border">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Search ABBs</h5>
+                                <form class="form-inline">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <ul class="list-group">
+                                    <li class="list-group-item list-group-item-action" ng-repeat="abb in abbMap" ng-model="abbMap" ng-click="selectABB(abb)" >{{abb.name}}</li> 
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Partner or Collaborative Applications </h5>
+                                <div class="form-group">
+                                    
+                                    <div class="form-group">
+
+                                        
+                                        <div class="list-group">
+                                            <a href="" class="list-group-item list-group-item-action active"> Potential problems of integration
+                                                <label></label>
+                                            </a>
+                                            <a href="" class="list-group-item list-group-item-action"  ng-repeat="application in applicationMap"  ng-click="selectApplication(application)">{{application.applicationName}}</a> 
+                                        </div>
+                                        <div class="container" style="margin-top: 50px;">
+                                            
+                                                <div class="row">
+                                                    <div class="form-group" style="">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <label for="applicationNameC1">Application Name</label>
+                                                                    <input type="text" class="form-control" id="applicationNameC1" placeholder="" ng-model="applicationNameC1" required="">
+                                                                    <div class="invalid-feedback"> Valid Description is required. </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label for="applicationDataFormatC1">Data format used</label>
+                                                                    <input type="text" class="form-control" id="applicationDataFormatC1" placeholder="" ng-model="applicationDataFormatC1" required="">
+                                                                    <div class="invalid-feedback"> Valid Rationale is required. </div>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <div class="py-5">
+        <div class="container">
+            <div class="row" >
+                <div class="col-md-12">
+                    <a class="btn mt-12 btn-sm btn-block btn-primary m-2" href="#!/phaseC2">Validation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="phaseAImg" style="width: 40%; float : left;"> 
+        <div class="py-5 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="text-primary">Progression</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress my-4" style="width: 80%;">
+                <div id="progressBarid" class="progress-bar progress-bar-striped" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">{{progressValue}}</div>
+            </div>
+        <img ng-src="{{imgName}}" class="img-thumbnail" style="width: 90%;" alt="implementationPhaseA1">
+    </div>   
+</div>
+</div>
